@@ -15,7 +15,9 @@ text: "qux" output => "QvX"
 """
 
 
-def fn_hack_3():
-    result = "fooziman"
-    #...
-    return result
+def fn_hack_3(result):
+     result = result.capitalize()[:-1] + result[-1].upper()
+     result = result.replace("a", "@").replace("e", "3").replace("i", "¡").replace("o", "0").replace("U","v").replace("u", "v")
+     return result
+
+print(fn_hack_3("qu"))
